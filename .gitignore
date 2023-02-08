@@ -9,3 +9,4 @@ flatpak/build/*
 .flatpak-builder/*
 ninjadroid_*.snap
 venv/*
+.vs
