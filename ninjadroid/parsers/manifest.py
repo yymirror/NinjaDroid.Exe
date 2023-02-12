@@ -5,7 +5,7 @@ from xml.parsers.expat import ExpatError
 from typing import Any, Dict, List, Optional
 from pyaxmlparser.axmlprinter import AXMLPrinter
 
-from ninjadroid.aapt.aapt import Aapt
+from ninjadroid.parsers.aapt import Aapt
 from ninjadroid.parsers.file import File, FileParser, FileParsingError
 
 

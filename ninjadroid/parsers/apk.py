@@ -4,7 +4,7 @@ from tempfile import mkdtemp
 from typing import Dict, List, Optional, Union
 from zipfile import ZipFile
 
-from ninjadroid.aapt.aapt import Aapt
+from ninjadroid.parsers.aapt import Aapt
 from ninjadroid.parsers.manifest import AndroidManifest, AndroidManifestParser, AndroidManifestParsingError
 from ninjadroid.parsers.cert import Cert, CertParser, CertParsingError
 from ninjadroid.parsers.dex import Dex, DexParser
@@ -83,7 +83,7 @@ class ApkParser:
     Parser implementation for Android APK packages.
     """
 
-    __TEMPORARY_DIR = ".ninjadroid"
+    __TEMPORARY_DIR = ".ninjadroid_"
 
     def __init__(self, logger: Logger = default_logger):
         self.logger = logger

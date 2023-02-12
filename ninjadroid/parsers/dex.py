@@ -109,7 +109,7 @@ class DexParser:
 
     @staticmethod
     def parse_strings(filepath: str) -> List:
-        with Popen("strings " + filepath, stdout=PIPE, stderr=None, shell=True) as process:
+        with Popen("strings.exe " + filepath, stdout=PIPE, stderr=None, shell=True) as process:
             strings = filter(
                 lambda string: string != "",
                 (string.strip() for string in process.communicate()[0].decode("utf-8").splitlines())

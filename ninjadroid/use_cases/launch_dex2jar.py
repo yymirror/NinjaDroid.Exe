@@ -11,18 +11,11 @@ class LaunchDex2Jar:
     """
     Generate a JAR file from the DEX one.
     """
-
-    __DIRECTORY = "dex2jar"
-    __FILE = "d2j-dex2jar.sh"
+    __DEX2JAR_PATH = "dex2jar.exe"
 
     def __init__(self, logger: Logger = default_logger):
         self.logger = logger
-        self.dex2jar = os.path.join(
-            os.path.dirname(__file__),
-            "..",
-            LaunchDex2Jar.__DIRECTORY,
-            LaunchDex2Jar.__FILE
-        )
+        self.dex2jar = LaunchDex2Jar.__DEX2JAR_PATH
         self.logger.debug("dex2jar path: %s", self.dex2jar)
 
     def execute(self, input_filepath: str, input_filename: str, output_directory: str):

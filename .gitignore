@@ -10,3 +10,5 @@ flatpak/build/*
 ninjadroid_*.snap
 venv/*
 .vs
+ninjadroid.dist
+ninjadroid.build

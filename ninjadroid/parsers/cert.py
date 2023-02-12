@@ -262,7 +262,7 @@ class CertParser:
     @staticmethod
     def parse_cert(filepath: str) -> str:
         raw = ""
-        command = "keytool -printcert -file " + filepath
+        command = "keytool.exe -printcert -file " + filepath
         with Popen(command, stdout=PIPE, stderr=None, shell=True) as process:
             raw = process.communicate()[0].decode("utf-8")
         if re.search("^keytool error", raw, re.IGNORECASE):
